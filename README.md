@@ -29,11 +29,11 @@ python main.py --image_url_file $images_path$ --crops_url_file $crops_path$ --o 
 
 Example : 
 ```bash 
-python main.py --images ../data/sample_testset/images/ --crops ../data/sample_testset/crops/ --o ../output/sample_testset/result.json -g ../data/sample_testset/out_res.json 
+python src/main.py --images data/sample_testset/images/ --crops data/sample_testset/crops/ --o output/sample_testset/result.json -g data/sample_testset/out_res.json 
 ```
 or
 ```bash
-python main.py --image_url_file ../data/images.txt --crops_url_file ../data/crops.txt --o ../output/result.json
+python src/main.py --image_url_file data/images.txt --crops_url_file data/crops.txt --o output/result.json
 ```
 
 ## Description 
