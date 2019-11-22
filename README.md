@@ -66,11 +66,40 @@ Based on the analysis and evaluation of the model, the following were the shortc
 ## Improvements Implemented
 Based on the shortcomings of the previous method, a major consideration was now to map images to their crops irrespective of their orientation. Though template matching based algorithm was capable in multiscale image matching, it couldn't take into consideration the rotations and other orientations into matching. 
 
-To address this, a feature based algorithm was explored. 
+To address this, a feature based algorithm was explored [2]. The major steps involved in this are, 
+* Interest / Key Point Detection : to find relevant points in pictures, to encode them later as a representation of the original picture. 
+*  Descriptor Extraction : to extract a small patch around each keypoint, preserving the most relevant information and discarding unnecessary information
+* Feature Representation 
+* Feature storage and datastructure
+* Distance choice
+* Matching and selection
+* Model fitting
 
+On these lines, a SIFT (Scale-Invariant Feature Transform)[3] was used. This was not integrated into the CLI interface. The detector notebook in src folder has implementation details on this and a sample set of images were executed to observe that it is rotation and shift invariant and also helps in identifying if a crop does not appear in an image. The above steps were closely followed, _**creating a SIFT detector, detection and computing the keypoints descriptors with SIFT, using a FLANN Based matcher, perspective transforms**_. Later a blue rectangle is built visually represent the findings. 
 
+The mapping can be represented as images below,
 
+* **Regular mapping** : 
 
+![1](readme_images/1.png)
+
+* **Rotated Image mapping** : 
+
+![2](readme_images/2.png)
+
+* **Incorrect image mapping** : 
+
+![3](readme_images/3.png)
+
+In case of incorrect mapping it can be observed that no proper rectangle is obtained. 
+
+## Further Future Work
+* To include the SIFT based detector as part of the CLI
+* To explore other detectors and also add them to the CLI so that the user can choose how they want to match the images. 
 
 ## References
 [1] https://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/template_matching/template_matching.html
+
+[2] https://github.com/CIRCL/carl-hauser/blob/master/SOTA/SOTA.md
+
+[3] https://docs.opencv.org/3.4/da/df5/tutorial_py_sift_intro.html
