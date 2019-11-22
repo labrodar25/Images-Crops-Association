@@ -95,7 +95,8 @@ In case of incorrect mapping it can be observed that no proper rectangle is obta
 
 ## Further Future Work
 * To include the SIFT based detector as part of the CLI
-* To explore other detectors and also add them to the CLI so that the user can choose how they want to match the images. 
+* To explore other detectors and also add them to the CLI so that the user can choose how they want to match the images.
+* To explore cluster and pairwise neural network models which would be capable of training a score function which is maximized when two same images are given as input and minimized when two different images are given as input. This could be done easily if the ground truth labels of related images are given for train data too.
 
 ## References
 [1] https://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/template_matching/template_matching.html
