@@ -21,8 +21,8 @@ def main():
 	image_association_obj = imageCropAssociation()
 	
 	if args['image_url_file'] and args['crops_url_file'] is not None:
-		imagesFilePaths = image_association_obj.getFiles(args.image_url_file)
-		cropsFilePaths = image_association_obj.getFiles(args.crops_url_file)
+		imagesFilePaths = image_association_obj.getFiles(args['image_url_file'])
+		cropsFilePaths = image_association_obj.getFiles(args['crops_url_file'])
 	elif args['images'] and args['crops']:
 		imagesFilePaths = os.listdir(args['images'])
 		cropsFilePaths = os.listdir(args['crops'])
