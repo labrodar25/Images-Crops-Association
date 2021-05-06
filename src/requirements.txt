@@ -70,7 +70,7 @@ fastcache==1.0.2
 filelock==3.0.10
 Fiona==1.8.4
 Flask==1.0.2
-Flask-Cors==3.0.7
+Flask-Cors==3.0.9
 flufl.lock==3.2
 folium==0.10.0
 funcy==1.13
