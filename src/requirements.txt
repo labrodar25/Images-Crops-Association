@@ -297,7 +297,7 @@ traitlets==4.3.2
 treelib==1.5.5
 tweepy==3.7.0
 unicodecsv==0.14.1
-urllib3==1.24.1
+urllib3==1.26.5
 virtualenv==16.7.6
 wcwidth==0.1.7
 webencodings==0.5.1
